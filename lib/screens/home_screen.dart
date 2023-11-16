@@ -21,7 +21,6 @@ class _HomeScreenState extends State<HomeScreen> {
           margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 35),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
-            border: Border.all(width: 1),
           ),
           child: Container(
             width: double.infinity,
@@ -233,7 +232,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ContextModel cm = ContextModel();
         var finalValue = exp.evaluate(EvaluationType.REAL, cm);
         output = finalValue.toString();
-        if (output.endsWith(".1")) {
+        if (output.endsWith(".0")) {
           output = output.substring(0, output.length - 2);
         }
         input = output;
